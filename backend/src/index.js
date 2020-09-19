@@ -8,11 +8,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
 
-//Controllers
-require('./controllers/register')(app);
-require('./controllers/getSurvivor')(app);
-require('./controllers/reports')(app);
-require('./controllers/updateLocation')(app);
-require('./controllers/updateInfected')(app);
+//Controles
+require('./controles/registro')(app);
+require('./controles/getCliente')(app);
+require('./controles/alterarCliente')(app);
+require('./controles/deletarCliente')(app);
 
 app.listen(3003);

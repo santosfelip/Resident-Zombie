@@ -4,7 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyle = makeStyles((theme) => ({
     footer: {
         position: 'fixed',
-        color: 'white',
+        color: '#18191A',
         width: '100%',
         textAlign: 'center',
         bottom: '0',

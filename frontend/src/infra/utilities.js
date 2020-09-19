@@ -1,5 +1,5 @@
 
-//BASE_URL of Backend
+//BASE_URL do Backend
 export const BASE_URL  = 'http://localhost:3003/api';
 
 //Add one more in the longitude to create the false location

@@ -3,7 +3,7 @@ import { useField } from '@unform/core';
 
 export default function Input({ name,label, ...rest }) {
     const inputRef = useRef(null);
-    const { fieldName, registerField, error } = useField(name);
+    const { fieldName, registerField,defaultValue, error } = useField(name);
 
 
     useEffect(() => {
@@ -18,7 +18,7 @@ export default function Input({ name,label, ...rest }) {
         <div>
             {label && <label htmlFor={fieldName}>{label}</label>}
             {error && <span style={{ color: '#f00'}}>{error}</span>}
-            <input ref={inputRef}{...rest}/>
+            <input ref={inputRef} defaultValue={defaultValue} {...rest}/>
         </div>
     );
 }

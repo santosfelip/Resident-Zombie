@@ -7,10 +7,9 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 
 //Icon
-import AccessibilityIcon from '@material-ui/icons/Accessibility';
-import MyLocationIcon from '@material-ui/icons/MyLocation';
-import PanToolIcon from '@material-ui/icons/PanTool';
-import PictureAsPdfIcon from '@material-ui/icons/PictureAsPdf';
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import FolderSharedIcon from '@material-ui/icons/FolderShared';
+
 
 
 const useStyles = makeStyles((theme) => ({
@@ -23,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
         width: theme.spacing(23),
         height: theme.spacing(28),
         margin: theme.spacing(1),
-        backgroundColor: '#242526',
+        backgroundColor: '#FFFFFF',
         '&:hover': {
             cursor: 'pointer',
             width: theme.spacing(25),
@@ -47,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
         marginTop: theme.spacing(4),
         marginBottom: theme.spacing(2),
         textAlign: 'center',
-        color: 'white',
+        color: '#18191A',
         [theme.breakpoints.down('sm')]:{
           marginTop: theme.spacing(8),
           fontSize: '24px',
@@ -56,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
     Icon: {
         marginTop: theme.spacing(3),
         fontSize: theme.spacing(10),
-        color: 'white',
+        color: '#18191A',
         [theme.breakpoints.down('sm')]:{
           marginTop: theme.spacing(2),
           fontSize: theme.spacing(5),
@@ -66,7 +65,7 @@ const useStyles = makeStyles((theme) => ({
         marginTop: theme.spacing(4),
         marginBottom: theme.spacing(2),
         textAlign: 'center',
-        color: 'white',
+        color: '#18191A',
         [theme.breakpoints.down('sm')]:{
           marginTop: theme.spacing(2),
           fontSize: '14px',
@@ -80,7 +79,7 @@ const Dashboard = () => {
 
     return (
         <div className={classes.root}>
-            <h1 className={classes.title}>The Resident Zombie</h1>
+            <h1 className={classes.title}>Sistema Cadastro de Clientes</h1>
             <Grid
                 container
                 direction="row"
@@ -91,42 +90,23 @@ const Dashboard = () => {
                     <Paper
                         className={classes.paper}
                         elevation={5}
-                        onClick={() => history.push('registerSurvivor')}
+                        onClick={() => history.push('cadastroCliente')}
                     >
-                        <AccessibilityIcon className={classes.Icon}/>
-                        <h2 className={classes.Subtitle}>Register new survivor</h2>
+                        <AccountCircleIcon className={classes.Icon}/>
+                        <h2 className={classes.Subtitle}>Cadastrar Cliente</h2>
                     </Paper>
                 </Grid>
                 <Grid item >
                     <Paper
                         className={classes.paper}
                         elevation={5}
-                        onClick={() => history.push('locationEdit')}
+                        onClick={() => history.push('consultaCliente')}
                     >
-                        <MyLocationIcon className={classes.Icon}/>
-                        <h2 className={classes.Subtitle}>My Location</h2>
+                        <FolderSharedIcon className={classes.Icon}/>
+                        <h2 className={classes.Subtitle}>Consultar Clientes</h2>
                     </Paper>
                 </Grid>
-                <Grid item >
-                      <Paper
-                        className={classes.paper}
-                        elevation={5}
-                        onClick={() => history.push('infectedSurvivor')}
-                      >
-                        <PanToolIcon className={classes.Icon}/>
-                        <h2 className={classes.Subtitle}>Infected survivor</h2>
-                    </Paper>
-                </Grid>
-                <Grid item >
-                      <Paper
-                        className={classes.paper}
-                        elevation={5}
-                        onClick={() => history.push('reports')}
-                      >
-                        <PictureAsPdfIcon className={classes.Icon}/>
-                        <h2 className={classes.Subtitle}>Reports </h2>
-                    </Paper>
-                </Grid>
+
             </Grid>
         </div>
     )

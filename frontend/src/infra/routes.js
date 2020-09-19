@@ -3,19 +3,15 @@ import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
 
 //Components
 import App from '../App'
-import RegisterSurvivor from '../components/RegisterSurvivor/RegisterSurvivor'
-import Infectedsurvivor from '../components/InfectedSurvivor/Infectedsurvivor'
-import Location from '../components/Location/Location'
-import Reports from '../components/Reports/Reports'
+import Cadastro from '../components/Cadastro/Cadastro'
+import Consulta from '../components/Consulta/Consulta'
 
 export default props => (
     <BrowserRouter>
         <Switch>
             <Route exact path='/' component={App} />
-            <Route path='/registerSurvivor' component={RegisterSurvivor} />
-            <Route path='/locationEdit' component={Location} />
-            <Route path='/infectedSurvivor' component={Infectedsurvivor} />
-            <Route path='/reports' component={Reports} />
+            <Route path='/cadastroCliente' component={Cadastro} />
+            <Route path='/consultaCliente' component={Consulta} />
             <Redirect from='*' to='/' />
         </Switch>
     </BrowserRouter>
